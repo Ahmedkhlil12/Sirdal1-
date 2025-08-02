@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Electrical Parts - Kaira</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="TemplatesJungle">
+  <meta name="keywords" content="electrical parts, electrical components, industrial electrical">
+  <meta name="description" content="High-quality electrical parts and components for industrial applications">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Marcellus&display=swap"
+    rel="stylesheet">
+  
+  <style>
+    /* Category Page Specific Styles */
+    .category-header {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 4rem 0;
+      margin-bottom: 3rem;
+    }
+    
+    .category-title {
+      font-family: 'Marcellus', serif;
+      font-size: 3rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    
+    .category-description {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .products-grid {
+      margin-bottom: 4rem;
+    }
+    
+    .product-card {
+      background: white;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+      margin-bottom: 2rem;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-color: #000;
+    }
+    
+    .product-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover .product-image {
+      transform: scale(1.05);
+    }
+    
+    .product-info {
+      padding: 1.5rem;
+    }
+    
+    .product-title {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    
+    .product-description {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    
+    .product-price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 1rem;
+    }
+    
+    .product-actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .product-actions .btn {
+      flex: 1;
+      min-width: 120px;
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+    }
+    
+    .breadcrumb-nav {
+      background: #f8f9fa;
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+    }
+    
+    .breadcrumb-item a {
+      color: #666;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .breadcrumb-item a:hover {
+      color: #000;
+    }
+    
+    .breadcrumb-item.active {
+      color: #000;
+      font-weight: 600;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .category-title {
+        font-size: 2rem;
+      }
+      
+      .product-actions {
+        flex-direction: column;
+      }
+      
+      .product-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body class="category-page">
+  <!-- SVG Definitions -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="instagram" viewBox="0 0 15 15">
+        <path fill="none" stroke="currentColor"
+          d="M11 3.5h1M4.5.5h6a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-6a4 4 0 0 1-4-4v-6a4 4 0 0 1 4-4Zm3 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="facebook" viewBox="0 0 15 15">
+        <path fill="none" stroke="currentColor"
+          d="M7.5 14.5a7 7 0 1 1 0-14a7 7 0 0 1 0 14Zm0 0v-8a2 2 0 0 1 2-2h.5m-5 4h5" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="twitter" viewBox="0 0 15 15">
+        <path fill="currentColor"
+          d="m14.478 1.5l.5-.033a.5.5 0 0 0-.871-.301l.371.334Zm-.498 2.959a.5.5 0 1 0-1 0h1Zm-6.49.082h-.5h.5Zm0 .959h.5h-.5Zm-6.99 7V12a.5.5 0 0 0-.278.916L.5 12.5Zm.998-11l.469-.175a.5.5 0 0 0-.916-.048l.447.223Zm3.994 9l.354.353a.5.5 0 0 0-.195-.827l-.159.474Zm7.224-8.027l-.37.336l.18.199l.265-.04l-.075-.495Zm1.264-.94c.051.778.003 1.25-.123 1.606c-.122.345-.336.629-.723 1l.692.722c.438-.42.776-.832.974-1.388c.193-.546.232-1.178.177-2.006l-.998.066Zm0 3.654V4.46h-1v.728h1Zm-6.99-.646V5.5h1v-.959h-1Zm0 .959V6h1v-.5h-1ZM10.525 1a3.539 3.539 0 0 0-3.537 3.541h1A2.539 2.539 0 0 1 10.526 2V1Zm2.454 4.187C12.98 9.503 9.487 13 5.18 13v1c4.86 0 8.8-3.946 8.8-8.813h-1ZM1.03 1.675C1.574 3.127 3.614 6 7.49 6V5C4.174 5 2.421 2.54 1.966 1.325l-.937.35Zm.021-.398C.004 3.373-.157 5.407.604 7.139c.759 1.727 2.392 3.055 4.73 3.835l.317-.948c-2.155-.72-3.518-1.892-4.132-3.29c-.612-1.393-.523-3.11.427-5.013l-.895-.446Zm4.087 8.87C4.536 10.75 2.726 12 .5 12v1c2.566 0 4.617-1.416 5.346-2.147l-.708-.706Zm7.949-8.009A3.445 3.445 0 0 0 10.526 1v1c.721 0 1.37.311 1.82.809l.74-.671Zm-.296.83a3.513 3.513 0 0 0 2.06-1.134l-.744-.668a2.514 2.514 0 0 1-1.466.813l.15.989ZM.222 12.916C1.863 14.01 3.583 14 5.18 14v-1c-1.63 0-3.048-.011-4.402-.916l-.556.832Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="heart" viewBox="0 0 24 24">
+        <path fill="currentColor"
+          d="M20.16 4.61A6.27 6.27 0 0 0 12 4a6.27 6.27 0 0 0-8.16 9.48l7.45 7.45a1 1 0 0 0 1.42 0l7.45-7.45a6.27 6.27 0 0 0 0-8.87Zm-1.41 7.46L12 18.81l-6.75-6.74a4.28 4.28 0 0 1 3-7.3a4.25 4.25 0 0 1 3 1.25a1 1 0 0 0 1.42 0a4.27 4.27 0 0 1 6 6.05Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="cart" viewBox="0 0 24 24">
+        <path fill="currentColor"
+          d="M8.5 19a1.5 1.5 0 1 0 1.5 1.5A1.5 1.5 0 0 0 8.5 19ZM19 16H7a1 1 0 0 1 0-2h8.491a3.013 3.013 0 0 0 2.885-2.176l1.585-5.55A1 1 0 0 0 19 5H6.74a3.007 3.007 0 0 0-2.82-2H3a1 1 0 0 0 0 2h.921a1.005 1.005 0 0 1 .962.725l.155.545v.005l1.641 5.742A3 3 0 0 0 7 18h12a1 1 0 0 0 0-2Zm-1.326-9l-1.22 4.274a1.005 1.005 0 0 1-.963.726H8.754l-.255-.892L7.326 7ZM16.5 19a1.5 1.5 0 1 0 1.5 1.5a1.5 1.5 0 0 0-1.5-1.5Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="search" viewBox="0 0 24 24">
+        <path fill="currentColor"
+          d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="user" viewBox="0 0 24 24">
+        <path fill="currentColor"
+          d="M15.71 12.71a6 6 0 1 0-7.42 0a10 10 0 0 0-6.22 8.18a1 1 0 0 0 2 .22a8 8 0 0 1 15.9 0a1 1 0 0 0 1 .89h.11a1 1 0 0 0 .88-1.1a10 10 0 0 0-6.25-8.19ZM12 12a4 4 0 1 1 4-4a4 4 0 0 1-4 4Z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-light text-uppercase fs-6 p-3 border-bottom align-items-center position-relative">
+    <div class="container-fluid">
+      <div class="row justify-content-between align-items-center w-100">
+        <div class="col-auto">
+          <a class="navbar-brand text-white" href="index.html">
+            <svg width="112" height="45" viewBox="0 0 112 45" xmlns="http://www.w3.org/2000/svg" fill="#111">
+              <path d="M2.51367 34.9297C2.58398 34.6836 2.64844 34.3789 2.70703 34.0156C2.77734 33.6523 2.83594 33.2012 2.88281 32.6621C2.92969 32.123 2.96484 31.4844 2.98828 30.7461C3.01172 29.9961 3.02344 29.123 3.02344 28.127V16.6836C3.02344 15.6875 3.01172 14.8203 2.98828 14.082C2.96484 13.332 2.92969 12.6875 2.88281 12.1484C2.83594 11.5977 2.77734 11.1406 2.70703 10.7773C2.64844 10.4141 2.58398 10.1094 2.51367 9.86328V9.79297H6.73242V9.86328C6.66211 10.1094 6.5918 10.4141 6.52148 10.7773C6.46289 11.1406 6.41016 11.5977 6.36328 12.1484C6.32812 12.6875 6.29297 13.332 6.25781 14.082C6.23438 14.8203 6.22266 15.6875 6.22266 16.6836V20.6035L16.4883 12.2188C17.6367 11.2813 18.2109 10.4727 18.2109 9.79297H23.1504V9.86328C22.459 10.0273 21.7559 10.3437 21.041 10.8125C20.3379 11.2695 19.5879 11.832 18.791 12.5L9.7207 20.0938L20.6367 32.082C21.0938 32.5508 21.4805 32.9434 21.7969 33.2598C22.125 33.5645 22.4121 33.8223 22.6582 34.0332C22.9043 34.2324 23.127 34.4023 23.3262 34.543C23.5371 34.6719 23.7539 34.8008 23.9766 34.9297V35H18.8262C18.7793 34.8945 18.6973 34.7598 18.5801 34.5957C18.4746 34.4316 18.3457 34.2617 18.1934 34.0859C18.0527 33.9102 17.8945 33.7285 17.7188 33.541C17.5547 33.3535 17.3965 33.1777 17.2441 33.0137L6.22266 20.9199V28.127C6.22266 29.123 6.23438 29.9961 6.25781 30.7461C6.29297 31.4844 6.32812 32.123 6.36328 32.6621C6.41016 33.2012 6.46289 33.6523 6.52148 34.0156C6.5918 34.3789 6.66211 34.6836 6.73242 34.9297V35H2.51367V34.9297Z"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        
+
+        <div class="col-auto">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 gap-1 gap-md-5 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="#" id="dropdownShop" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Categories</a>
+                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownShop">
+                    <li>
+                      <a href="machinery-parts.html" class="dropdown-item item-anchor">Machinery Parts</a>
+                    </li>
+                    <li>
+                      <a href="hydraulic-parts.html" class="dropdown-item item-anchor">Hydraulic Parts</a>
+                    </li>
+                    <li>
+                      <a href="electrical-parts.html" class="dropdown-item item-anchor active">Electrical Parts</a>
+                    </li>
+                    <li>
+                      <a href="led-light.html" class="dropdown-item item-anchor">LED Light</a>
+                    </li>
+                    <li>
+                      <a href="spreader-parts.html" class="dropdown-item item-anchor">Spreader Parts</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3 col-lg-auto">
+          <ul class="list-unstyled d-flex m-0">
+            <li class="d-none d-lg-block">
+              <a href="index.html" class="text-uppercase mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                aria-controls="offcanvasCart">Cart <span class="cart-count">(0)</span>
+              </a>
+            </li>
+            <li class="d-lg-none">
+              <a href="#" class="mx-2">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="d-lg-none">
+              <a href="#" class="mx-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                aria-controls="offcanvasCart">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#cart"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="search-box" class="mx-2">
+              <a href="#search" class="search-button">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <use xlink:href="#search"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb-nav">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Electrical Parts</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  
+
+  <!-- Products Grid -->
+  <section class="products-grid">
+    <div class="container">
+      <div class="row">
+        <!-- Product 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Cable Reel.png" alt="Circuit Breaker" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Cable Reel</h5>
+              <p class="product-description">High-capacity circuit breaker for industrial electrical systems with thermal and magnetic protection.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Circuit Breaker', 180)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/E-Chain.png" alt="Electrical Panel" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">E-Chain</h5>
+              <p class="product-description">Industrial electrical distribution panel with multiple circuit protection and monitoring.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Electrical Panel', 450)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Festoon System.png" alt="Motor Starter" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Festoon System</h5>
+              <p class="product-description">Heavy-duty motor starter with overload protection for industrial motor control applications.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Motor Starter', 320)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Transformer.png" alt="Transformer" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Transformer</h5>
+              <p class="product-description">Industrial power transformer for voltage conversion and electrical isolation.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Transformer', 1200)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/HV witchgear.png" alt="Electrical Cable" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">HV witchgear</h5>
+              <p class="product-description">High-quality electrical cable with proper insulation for industrial power distribution.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Electrical Cable', 85)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/HV lip Ring.png" alt="Switchgear" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">HV lip Ring</h5>
+              <p class="product-description">Advanced switchgear system for electrical distribution and protection in industrial facilities.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Switchgear', 2500)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Motor.png" alt="Control Relay" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Motor</h5>
+              <p class="product-description">Precision control relay for automation and electrical control systems.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Control Relay', 65)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Cable.png" alt="Power Supply" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Cable</h5>
+              <p class="product-description">Industrial power supply unit with voltage regulation and protection features.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Power Supply', 280)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="products-grid">
+    <div class="container">
+      <div class="row">
+        <!-- Product 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Encoder.png" alt="Circuit Breaker" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Encoder</h5>
+              <p class="product-description">High-capacity circuit breaker for industrial electrical systems with thermal and magnetic protection.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Circuit Breaker', 180)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="openChat('Circuit Breaker')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Load Cell.png" alt="Electrical Panel" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Load Cell</h5>
+              <p class="product-description">Industrial electrical distribution panel with multiple circuit protection and monitoring.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Electrical Panel', 450)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Overload Limiter.png" alt="Motor Starter" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Overload Limiter</h5>
+              <p class="product-description">Heavy-duty motor starter with overload protection for industrial motor control applications.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Motor Starter', 320)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Limit Switch.png" alt="Transformer" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Limit Switch</h5>
+              <p class="product-description">Industrial power transformer for voltage conversion and electrical isolation.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Transformer', 1200)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Light Alarm.png" alt="Electrical Cable" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Light Alarm</h5>
+              <p class="product-description">High-quality electrical cable with proper insulation for industrial power distribution.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Electrical Cable', 85)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Anit-collision Switch.png" alt="Switchgear" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Anit-collision Switch</h5>
+              <p class="product-description">Advanced switchgear system for electrical distribution and protection in industrial facilities.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Switchgear', 2500)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Obsacle light.png" alt="Control Relay" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title"> Obsacle light</h5>
+              <p class="product-description">Precision control relay for automation and electrical control systems.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Control Relay', 65)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Wind speed sensor.png" alt="Power Supply" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Wind speed sensor</h5>
+              <p class="product-description">Industrial power supply unit with voltage regulation and protection features.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Power Supply', 280)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="products-grid">
+    <div class="container">
+      <div class="row">
+        <!-- Product 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Telephone.png" alt="Circuit Breaker" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Telephone</h5>
+              <p class="product-description">High-capacity circuit breaker for industrial electrical systems with thermal and magnetic protection.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Circuit Breaker', 180)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Camera.png" alt="Electrical Panel" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Camera</h5>
+              <p class="product-description">Industrial electrical distribution panel with multiple circuit protection and monitoring.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Electrical Panel', 450)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Socket.png" alt="Motor Starter" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Socket</h5>
+              <p class="product-description">Heavy-duty motor starter with overload protection for industrial motor control applications.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Motor Starter', 320)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Module.png" alt="Transformer" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Module</h5>
+              <p class="product-description">Industrial power transformer for voltage conversion and electrical isolation.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Transformer', 1200)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Industrial Computer.png" alt="Electrical Cable" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Industrial Computer</h5>
+              <p class="product-description">High-quality electrical cable with proper insulation for industrial power distribution.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Electrical Cable', 85)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Circuit Breaker.png" alt="Switchgear" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Circuit Breaker</h5>
+              <p class="product-description">Advanced switchgear system for electrical distribution and protection in industrial facilities.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Switchgear', 2500)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Fuse.png" alt="Control Relay" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Fuse</h5>
+              <p class="product-description">Precision control relay for automation and electrical control systems.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Control Relay', 65)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Safety relay.png" alt="Power Supply" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Safety relay</h5>
+              <p class="product-description">Industrial power supply unit with voltage regulation and protection features.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Power Supply', 280)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="products-grid">
+    <div class="container">
+      <div class="row">
+        <!-- Product 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Inverter.png" alt="Circuit Breaker" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Inverter</h5>
+              <p class="product-description">High-capacity circuit breaker for industrial electrical systems with thermal and magnetic protection.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Circuit Breaker', 180)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Electrical Parts1.png" alt="Electrical Panel" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Electrical Panel</h5>
+              <p class="product-description">Industrial electrical distribution panel with multiple circuit protection and monitoring.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Electrical Panel', 450)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Decoder1.png" alt="Motor Starter" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Decoder</h5>
+              <p class="product-description">Heavy-duty motor starter with overload protection for industrial motor control applications.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Motor Starter', 320)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Safety Controllers.png" alt="Transformer" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Safety Controllers</h5>
+              <p class="product-description">Industrial power transformer for voltage conversion and electrical isolation.</p>
+              
+              
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Transformer', 1200)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Main PLC.png" alt="Electrical Cable" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title">Main PLC</h5>
+              <p class="product-description">High-quality electrical cable with proper insulation for industrial power distribution.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Electrical Cable', 85)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/PLC module.png" alt="Switchgear" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title"> PLC module</h5>
+              <p class="product-description">Advanced switchgear system for electrical distribution and protection in industrial facilities.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Switchgear', 2500)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product-card">
+            <img src="images/Power Supply.png" alt="Switchgear" class="product-image">
+            <div class="product-info">
+              <h5 class="product-title"> Power Supply</h5>
+              <p class="product-description">Advanced switchgear system for electrical distribution and protection in industrial facilities.</p>
+              <div class="product-price"></div>
+              <div class="product-actions">
+                <button class="btn btn-outline-dark" onclick="addToCart('Switchgear', 2500)">Add to Cart</button>
+                <button class="btn btn-outline-secondary" onclick="window.open('https:wa.link/wxq441', '_blank')">Chat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+  </section>
+<!-- Category Header -->
+  <section class="category-header">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1 class="category-title">Electrical Parts</h1>
+          <p class="category-description">
+            Electrical parts must be chosen and used responsibly, considering safety, function, and appropriate applications.
+            High-quality electrical components for industrial and commercial use.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Additional Electrical Parts Section -->
+
+  <!-- Footer -->
+  <footer id="footer" class="mt-5">
+    <div class="container">
+      <div class="row d-flex flex-wrap justify-content-between py-5">
+        <div class="col-md-3 col-sm-6">
+          <div class="footer-menu footer-menu-001">
+            <div class="footer-intro mb-4">
+              <a href="index.html">
+                <img src="images/main-logo.png" alt="logo">
+              </a>
+            </div>
+            <p>Gravida massa volutpat aenean odio. Amet, turpis erat nullam fringilla elementum diam in. Nisi, purus
+              vitae, ultrices nunc. Sit ac sit suscipit hendrerit.</p>
+            <div class="social-links">
+              <ul class="list-unstyled d-flex flex-wrap gap-3">
+                <li>
+                  <a href="#" class="text-secondary">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                      <use xlink:href="#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-secondary">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                      <use xlink:href="#twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer-menu footer-menu-002">
+            <h5 class="widget-title text-uppercase mb-4">Quick Links</h5>
+            <ul class="menu-list list-unstyled text-uppercase border-animation-left fs-6">
+              <li class="menu-item">
+                <a href="index.html" class="item-anchor">Home</a>
+              </li>
+              <li class="menu-item">
+                <a href="index.html" class="item-anchor">About</a>
+              </li>
+              <li class="menu-item">
+                <a href="blog.html" class="item-anchor">Services</a>
+              </li>
+              <li class="menu-item">
+                <a href="styles.html" class="item-anchor">Single item</a>
+              </li>
+              <li class="menu-item">
+                <a href="index.html" class="item-anchor">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer-menu footer-menu-004 border-animation-left">
+            <h5 class="widget-title text-uppercase mb-4">Contact Us</h5>
+            <p>Do you have any questions or suggestions? <a href="mailto:contact@yourcompany.com"
+                class="item-anchor">khmcyao@163.com</a></p>
+            <p>Do you need support? Give us a call. <a href="tel:+86 18221243735" class="item-anchor">+86 18221243735
+                </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.min.js"></script>
+
+  <script>
+    // Cart functionality
+    let cartItems = [];
+    let cartCount = 0;
+
+    function updateCartCount() {
+      const cartCountElement = document.querySelector('.cart-count');
+      if (cartCountElement) {
+        cartCountElement.textContent = `(${cartCount})`;
+      }
+    }
+
+    function addToCart(productName, price) {
+      cartItems.push({ name: productName, price: price });
+      cartCount++;
+      updateCartCount();
+      showAlert(`${productName} added to cart!`, 'success');
+    }
+
+    function openChat(productName) {
+      // Simple navigation - redirect to contact page with product info
+      const contactUrl = `contact.html?product=${encodeURIComponent(productName)}`;
+      window.location.href = contactUrl;
+      
+      // Alternative: Open email client with pre-filled message
+      // const subject = `Inquiry about ${productName}`;
+      // const body = `Hello,\n\nI'm interested in learning more about ${productName}.\n\nPlease provide more information about:\n- Specifications\n- Pricing\n- Availability\n- Delivery options\n\nThank you!`;
+      // window.location.href = `mailto:khmcyao@163.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+
+    function showAlert(message, type = 'info') {
+      const alertDiv = document.createElement('div');
+      alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+      alertDiv.style.position = 'fixed';
+      alertDiv.style.top = '20px';
+      alertDiv.style.right = '20px';
+      alertDiv.style.zIndex = '1100';
+      alertDiv.style.minWidth = '300px';
+      alertDiv.innerHTML = `
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      `;
+      
+      document.body.appendChild(alertDiv);
+      
+      setTimeout(() => {
+        const bsAlert = new bootstrap.Alert(alertDiv);
+        bsAlert.close();
+      }, 3000);
+    }
+
+    // Initialize cart count
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCartCount();
+    });
+  </script>
+</body>
+
+</html> 
